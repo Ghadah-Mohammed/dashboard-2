@@ -42,13 +42,13 @@ function CompanyViewModal(props) {
         <ListGroup.Item>
           <strong>Comments:</strong>
           <ListGroup>
-            {company.project.map(project =>
-              project.comment.map(comment => (
+            {company.comment?.map(comment =>
+              
                 <ListGroup.Item>
                   <p style={{ marginLeft: 10 }}>{comment.comment}</p>
                 </ListGroup.Item>
-              ))
-            )}
+              )
+            }
           </ListGroup>
         </ListGroup.Item>
       </Modal.Body>
