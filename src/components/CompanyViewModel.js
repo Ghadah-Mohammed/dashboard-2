@@ -17,10 +17,9 @@ function CompanyViewModal(props) {
             <img src={company.avatar} style={{ objectFit: "contain", height: "200px", width: "100%" }} />
           </ListGroup.Item>
         </ListGroup>
-        
         <ListGroup.Item>
           <strong>Projects:</strong>
-          <ListGroup>
+          <ListGroup style={{ maxHeight: 150, overflowY: "scroll" }}>
             {company.project.map(project => (
               <ListGroup.Item>
                 <Image src={project.photo} roundedCircle height={50} width={50} style={{ objectFit: "cover" }} />
@@ -38,17 +37,15 @@ function CompanyViewModal(props) {
             ))}
           </ListGroup>
         </ListGroup.Item>
-       
+
         <ListGroup.Item>
           <strong>Comments:</strong>
           <ListGroup>
-            {company.comment?.map(comment =>
-              
-                <ListGroup.Item>
-                  <p style={{ marginLeft: 10 }}>{comment.comment}</p>
-                </ListGroup.Item>
-              )
-            }
+            {company.comment?.map(comment => (
+              <ListGroup.Item>
+                <p style={{ marginLeft: 10 }}>{comment.comment}</p>
+              </ListGroup.Item>
+            ))}
           </ListGroup>
         </ListGroup.Item>
       </Modal.Body>
