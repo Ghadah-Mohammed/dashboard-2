@@ -114,7 +114,7 @@ export default function PermanentDrawerLeft() {
               </ListItem>
             </Link>
           ) : (
-            <Link to="/login">
+            <Link to="/logout">
               <ListItem button>
                 <ListItemIcon>
                   <LoginIcon />
