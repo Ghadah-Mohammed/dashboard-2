@@ -22,7 +22,6 @@ function App() {
   }
 
   //get users
-
   const getUsers = async () => {
     const response = await axios.get("http://localhost:5000/api/admin/Users", {
       headers: {
@@ -69,6 +68,8 @@ function App() {
     }
   }
 
+
+  
   //delet company
   const deleteCompany = async companyId => {
     try {
