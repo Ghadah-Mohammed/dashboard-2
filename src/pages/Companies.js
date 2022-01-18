@@ -28,11 +28,11 @@ function Companies() {
           <Table bordered hover style={{ tableLayout: "fixed" }}>
             <thead>
               <tr>
-                <th style={{ width: "15%" }}>#</th>
-                <th style={{ width: "18%" }}> Name</th>
+                <th style={{ width: "12%" }}>#</th>
+                <th style={{ width: "13%" }}> Name</th>
                 <th style={{ width: "18%" }}>Photo</th>
                 <th style={{ width: "18%" }}>projects</th>
-                <th style={{ width: "18%" }}>Actions</th>
+                <th style={{ width: "25%" }}>Actions</th>
               </tr>
             </thead>
             <tbody>

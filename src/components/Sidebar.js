@@ -1,25 +1,25 @@
-import Box from "@mui/material/Box"
+// import Box from "@mui/material/Box"
 import Drawer from "@mui/material/Drawer"
-import CssBaseline from "@mui/material/CssBaseline"
-import AppBar from "@mui/material/AppBar"
-import Toolbar from "@mui/material/Toolbar"
+// import CssBaseline from "@mui/material/CssBaseline"
+// import AppBar from "@mui/material/AppBar"
+// import Toolbar from "@mui/material/Toolbar"
 import List from "@mui/material/List"
-import Typography from "@mui/material/Typography"
+// import Typography from "@mui/material/Typography"
 import Divider from "@mui/material/Divider"
 import ListItem from "@mui/material/ListItem"
 import ListItemIcon from "@mui/material/ListItemIcon"
 import ListItemText from "@mui/material/ListItemText"
-import InboxIcon from "@mui/icons-material/MoveToInbox"
-import MailIcon from "@mui/icons-material/Mail"
-import MovieCreationIcon from "@mui/icons-material/MovieCreation"
-import AddReactionIcon from "@mui/icons-material/AddReaction"
-import RecentActorsIcon from "@mui/icons-material/RecentActors"
+// import InboxIcon from "@mui/icons-material/MoveToInbox"
+// import MailIcon from "@mui/icons-material/Mail"
+// import MovieCreationIcon from "@mui/icons-material/MovieCreation"
+// import AddReactionIcon from "@mui/icons-material/AddReaction"
+// import RecentActorsIcon from "@mui/icons-material/RecentActors"
 import GroupIcon from "@mui/icons-material/Group"
-import TheatersIcon from "@mui/icons-material/Theaters"
+// import TheatersIcon from "@mui/icons-material/Theaters"
 import { createTheme, ThemeProvider } from "@mui/material"
 import { Link } from "react-router-dom"
 import LoginIcon from "@mui/icons-material/Login"
-import GroupAddIcon from "@mui/icons-material/GroupAdd"
+// import GroupAddIcon from "@mui/icons-material/GroupAdd"
 import { useContext } from "react"
 import EngineersContext from "../utils/EngineersContext"
 import { MdOutlineEngineering } from "react-icons/md"
@@ -63,9 +63,11 @@ export default function PermanentDrawerLeft() {
             <ListItemIcon>
               <MdOutlineEngineering style={{ fontSize: "30px" }} />
             </ListItemIcon>
-            <ListItemText primary="Company Engineer Dashboard" />
+            <ListItemText style={{marginTop:"20px"}} primary="Company Engineer Dashboard" />
           </ListItem>
         </List>
+        <Divider />
+
         <List>
           <Link to="/">
             <ListItem button>
@@ -92,7 +94,6 @@ export default function PermanentDrawerLeft() {
             </ListItem>
           </Link> */}
         </List>
-        <Divider />
         <List>
           <Link to="/users">
             <ListItem button>
@@ -114,12 +115,12 @@ export default function PermanentDrawerLeft() {
               </ListItem>
             </Link>
           ) : (
-            <Link to="/logout">
+            <Link to="/login">
               <ListItem button>
                 <ListItemIcon>
                   <LoginIcon />
                 </ListItemIcon>
-                <ListItemText primary="login" sx={{ color: "white", textDecoration: "none" }} />
+                <ListItemText primary="logout" sx={{ color: "white", textDecoration: "none" }} />
               </ListItem>
             </Link>
           )}
