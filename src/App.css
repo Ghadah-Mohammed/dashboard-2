@@ -1,5 +1,12 @@
 .login{
   /* background-color: rgba(36, 44, 87, 0.096); */
+  position: relative;
+  top:230px;
+  left:320px;
+  
+}
+
+.loginbody{
   border: rgba(14, 15, 26, 0.87) solid 1px;
   width: 600px;
   height:303px ;
