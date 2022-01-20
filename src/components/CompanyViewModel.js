@@ -22,7 +22,7 @@ function CompanyViewModal(props) {
           <ListGroup style={{ maxHeight: 150, overflowY: "scroll" }}>
             {company.project.map(project => (
               <ListGroup.Item>
-                <Image src={project.photo} roundedCircle height={50} width={50} style={{ objectFit: "cover" }} />
+                <Image src={project.photo[0]} roundedCircle height={50} width={50} style={{ objectFit: "cover" }} />
                 <p>
                   <strong>Title</strong>
                   <p style={{ marginLeft: 10 }}>{project.title}</p>
