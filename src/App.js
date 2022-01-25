@@ -16,14 +16,14 @@ function App() {
 
   //get companies
   const getCompanies = async () => {
-    const response = await axios.get("http://localhost:5000/api/admin/Companies")
+    const response = await axios.get("https://companies-api-1.herokuapp.com/api/admin/Companies")
     setCompanies(response.data)
     console.log(response.data)
   }
 
   //get users
   const getUsers = async () => {
-    const response = await axios.get("http://localhost:5000/api/admin/Users", {
+    const response = await axios.get("https://companies-api-1.herokuapp.com/api/admin/Users", {
       headers: {
         Authorization: localStorage.tokenDashboardEngineer,
       },
@@ -39,7 +39,7 @@ function App() {
   //delet user
   const deleteUser = async userId => {
     try {
-      await axios.delete(`http://localhost:5000/api/auth/${userId}`, {
+      await axios.delete(`https://companies-api-1.herokuapp.com/api/auth/${userId}`, {
         headers: {
           Authorization: localStorage.tokenDashboardEngineer,
         },
@@ -55,7 +55,7 @@ function App() {
   // verifiedcompany
   const verifiedcompany = async companyId => {
     try {
-      await axios.get(`http://localhost:5000/api/company/${companyId}/verify`, {
+      await axios.get(`https://companies-api-1.herokuapp.com/api/company/${companyId}/verify`, {
         headers: {
           Authorization: localStorage.tokenDashboardEngineer,
         },
@@ -68,12 +68,10 @@ function App() {
     }
   }
 
-
-  
   //delet company
   const deleteCompany = async companyId => {
     try {
-      await axios.delete(`http://localhost:5000/api/company/${companyId}`, {
+      await axios.delete(`https://companies-api-1.herokuapp.com/api/company/${companyId}`, {
         headers: {
           Authorization: localStorage.tokenDashboardEngineer,
         },
@@ -99,7 +97,7 @@ function App() {
         password: form.elements.password.value,
         avatar: form.elements.avatar.value,
       }
-      await axios.post(`http://localhost:5000/api/admin/add-admin`, adminBody, {
+      await axios.post(`https://companies-api-1.herokuapp.com/api/admin/add-admin`, adminBody, {
         headers: {
           Authorization: localStorage.tokenDashboardEngineer,
         },
@@ -127,7 +125,7 @@ function App() {
         email: form.elements.email.value,
         password: form.elements.password.value,
       }
-      const response = await axios.post("http://localhost:5000/api/admin/login", adminBody)
+      const response = await axios.post("https://companies-api-1.herokuapp.com/api/admin/login", adminBody)
       localStorage.tokenDashboardEngineer = response.data
       toast.success("login success")
       navigate("/")
